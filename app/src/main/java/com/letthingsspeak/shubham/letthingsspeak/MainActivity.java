@@ -1,8 +1,11 @@
 package com.letthingsspeak.shubham.letthingsspeak;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +16,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private RecyclerView roomTypeRecyclerView;
+    public static final int ACTIVITY_REQUEST_CODE = 201;
+    List<RoomDetails> room = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +33,22 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        roomTypeRecyclerView = (RecyclerView) findViewById(R.id.activity_main_recyclerview);
+        roomTypeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        room.add(new RoomDetails("Bed Room ", "1"));
+
+        room.add(new RoomDetails("Living Room ","0"));
+
+        RoomStore.setRoomDetails(room);
+        HomeAdapter homeAdapter = new HomeAdapter(RoomStore.getRoomDetails());
+        roomTypeRecyclerView.setAdapter(homeAdapter);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this, AddRoom.class);
+                startActivityForResult(intent, ACTIVITY_REQUEST_CODE);
             }
         });
 
@@ -42,6 +62,22 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK) {
+            if(requestCode == ACTIVITY_REQUEST_CODE){
+                String message = data.getStringExtra(AddRoom.ADDED_ROOM);
+
+                room.add(new RoomDetails(message, "1"));
+
+                RoomStore.setRoomDetails(room);
+
+                HomeAdapter homeAdapter = new HomeAdapter(RoomStore.getRoomDetails());
+                roomTypeRecyclerView.setAdapter(homeAdapter);
+            }
+        }
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

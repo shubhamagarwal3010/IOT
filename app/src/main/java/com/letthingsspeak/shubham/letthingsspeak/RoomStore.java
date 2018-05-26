@@ -1,18 +1,17 @@
 package com.letthingsspeak.shubham.letthingsspeak;
 
-import com.example.shubham.news.model.NewsArticle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsStore {
-    private static List<NewsArticle> newsArticles = new ArrayList<>();
+public class RoomStore {
+    private static List<RoomDetails> roomDetails = new ArrayList<>();
 
-    public static List<NewsArticle> getNewsArticles() {
-        return newsArticles;
+    public static List<RoomDetails> getRoomDetails() {
+        return roomDetails;
     }
 
-    public static void setNewsArticles(List<NewsArticle> newsArticles) {
-        NewsStore.newsArticles = newsArticles;
+    public static void setRoomDetails(List<RoomDetails> roomDetails) {
+        RoomStore.roomDetails = roomDetails;
     }
 }

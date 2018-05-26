@@ -1,58 +1,28 @@
-package com.letthingsspeak.shubham.letthingsspeak.model;
+package com.letthingsspeak.shubham.letthingsspeak;
 
-public class NewsArticle {
+public class RoomDetails {
 
-    public NewsArticle(String title, String details, String imageUrl, String time, String urlToArticle) {
-        this.title = title;
-        this.details = details;
-        this.imageUrl = imageUrl;
-        this.time = time;
-        this.urlToArticle = urlToArticle;
+    public RoomDetails(String roomType, String status) {
+        this.roomType = roomType;
+        this.status = status;
     }
 
-    public String getTitle() {
-        return title;
+    public String getRoomType() {
+        return roomType;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
-    public String getDetails() {
-        return details;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getUrlToArticle() {
-        return urlToArticle;
-    }
-
-    public void setUrlToArticle(String urlToArticle) {
-        this.urlToArticle = urlToArticle;
-    }
-
-    private String title;
-    private String details;
-    private String imageUrl;
-    private String time;
-    private String urlToArticle;
+    private String roomType;
+    private String status;
 }
