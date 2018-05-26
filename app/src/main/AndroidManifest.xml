@@ -22,9 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RoomIotDevices"
+            android:name=".device.DeviceActivity"
             android:resizeableActivity="true" />
-        <activity android:name=".AddRoom"></activity>
+        <activity android:name=".AddRoom" />
+        <activity android:name=".device.AddDevice"></activity>
     </application>
 
 </manifest>

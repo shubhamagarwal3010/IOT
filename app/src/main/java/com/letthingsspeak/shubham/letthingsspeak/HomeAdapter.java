@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.letthingsspeak.shubham.letthingsspeak.device.DeviceActivity;
+
 import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeNewsViewHolder> {
@@ -33,7 +35,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeNewsViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RoomIotDevices.launch(v.getContext(), position);
+                DeviceActivity.launch(v.getContext(), position);
             }
         });
     }
