@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
 
     private RecyclerView roomTypeRecyclerView;
     public static final int ACTIVITY_REQUEST_CODE = 201;
+    public static final int ROOM_DETAILS_REQUEST_CODE = 9283;
     List<RoomDetails> room = new ArrayList<>();
 
     @Override

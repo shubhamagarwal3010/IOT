@@ -2,8 +2,10 @@ package com.letthingsspeak.shubham.letthingsspeak.device;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,6 +22,8 @@ import com.letthingsspeak.shubham.letthingsspeak.RoomStore;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.letthingsspeak.shubham.letthingsspeak.constants.Constants.TITLE_KEY;
 
 public class DeviceActivity extends AppCompatActivity {
     private static final String KEY_INDEX = "device_index";
@@ -45,12 +49,13 @@ public class DeviceActivity extends AppCompatActivity {
         DeviceAdapter deviceAdapter = new DeviceAdapter(DeviceStore.getDeviceDetails());
         deviceRecyclerView.setAdapter(deviceAdapter);
 
-        int index = getIntent().getIntExtra(KEY_INDEX, -1);
-        if (index != -1) {
 
-        } else {
-            Toast.makeText(DeviceActivity.this, "Sorry incorrect index passed", Toast.LENGTH_SHORT).show();
-        }
+        Bundle extras = getIntent().getExtras();
+        String title = extras.getString(TITLE_KEY);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(title);
+        actionBar.show();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab2);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -2,17 +2,17 @@ package com.letthingsspeak.shubham.letthingsspeak.device;
 
 public class DeviceDetails {
 
-    public DeviceDetails(String roomType, String status) {
-        this.roomType = roomType;
+    public DeviceDetails(String deviceName, String status) {
+        this.deviceName = deviceName;
         this.status = status;
     }
 
-    public String getRoomType() {
-        return roomType;
+    public String getDeviceName() {
+        return deviceName;
     }
 
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
+    public void setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
     }
 
     public String getStatus() {
@@ -23,6 +23,6 @@ public class DeviceDetails {
         this.status = status;
     }
 
-    private String roomType;
+    private String deviceName;
     private String status;
 }

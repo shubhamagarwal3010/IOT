@@ -30,7 +30,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
     @Override
     public void onBindViewHolder(@NonNull DeviceViewHolder holder, final int position) {
         DeviceDetails deviceDetail = this.deviceDetails.get(position);
-        holder.cardTitleTextView.setText(deviceDetail.getRoomType());
+        holder.cardTitleTextView.setText(deviceDetail.getDeviceName());
     }
 
     @Override
