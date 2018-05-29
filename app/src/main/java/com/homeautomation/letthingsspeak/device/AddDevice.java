@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.letthingsspeak.shubham.letthingsspeak.R;
+import com.homeautomation.letthingsspeak.R;
+
 
 public class AddDevice extends AppCompatActivity {
 

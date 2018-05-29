@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.letthingsspeak.shubham.letthingsspeak.R;
+
+import com.homeautomation.letthingsspeak.R;
 
 import java.util.List;
 

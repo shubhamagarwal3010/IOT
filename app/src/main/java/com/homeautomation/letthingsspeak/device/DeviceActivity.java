@@ -11,7 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.letthingsspeak.shubham.letthingsspeak.R;
+
+import com.homeautomation.letthingsspeak.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -19,11 +19,14 @@ import android.view.MenuItem;
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.AWSStartupHandler;
 import com.amazonaws.mobile.client.AWSStartupResult;
+import com.homeautomation.letthingsspeak.room.AddRoom;
+import com.homeautomation.letthingsspeak.room.HomeAdapter;
+import com.homeautomation.letthingsspeak.room.RoomDetails;
+import com.homeautomation.letthingsspeak.room.RoomStore;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.letthingsspeak.shubham.letthingsspeak.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -54,7 +57,8 @@ public class MainActivity extends AppCompatActivity
         room.add(new RoomDetails("Living Room ","0"));
 
         RoomStore.setRoomDetails(room);
-        HomeAdapter homeAdapter = new HomeAdapter(RoomStore.getRoomDetails());
+        HomeAdapter homeAdapter;
+        homeAdapter = new HomeAdapter(RoomStore.getRoomDetails());
         roomTypeRecyclerView.setAdapter(homeAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
