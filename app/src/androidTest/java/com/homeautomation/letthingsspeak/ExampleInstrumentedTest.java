@@ -1,4 +1,4 @@
-package com.letthingsspeak.shubham.letthingsspeak;
+package com.homeautomation.letthingsspeak;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.letthingsspeak.shubham.letthingsspeak.device;
+package com.homeautomation.letthingsspeak.device;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

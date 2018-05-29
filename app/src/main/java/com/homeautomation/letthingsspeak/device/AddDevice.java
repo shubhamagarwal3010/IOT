@@ -1,4 +1,4 @@
-package com.letthingsspeak.shubham.letthingsspeak.device;
+package com.homeautomation.letthingsspeak.device;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

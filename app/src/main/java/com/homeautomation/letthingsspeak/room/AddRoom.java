@@ -1,10 +1,12 @@
-package com.letthingsspeak.shubham.letthingsspeak;
+package com.homeautomation.letthingsspeak.room;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.homeautomation.letthingsspeak.R;
 
 public class AddRoom extends AppCompatActivity {
 

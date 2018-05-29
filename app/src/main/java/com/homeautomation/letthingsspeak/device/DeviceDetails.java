@@ -1,4 +1,4 @@
-package com.letthingsspeak.shubham.letthingsspeak.device;
+package com.homeautomation.letthingsspeak.device;
 
 public class DeviceDetails {
 

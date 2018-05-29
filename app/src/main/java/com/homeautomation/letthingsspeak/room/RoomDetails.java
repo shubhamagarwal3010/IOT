@@ -1,4 +1,4 @@
-package com.letthingsspeak.shubham.letthingsspeak;
+package com.homeautomation.letthingsspeak.room;
 
 public class RoomDetails {
 

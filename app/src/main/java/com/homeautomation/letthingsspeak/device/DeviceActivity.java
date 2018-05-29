@@ -1,8 +1,7 @@
-package com.letthingsspeak.shubham.letthingsspeak.device;
+package com.homeautomation.letthingsspeak.device;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
@@ -11,19 +10,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.letthingsspeak.shubham.letthingsspeak.AddRoom;
-import com.letthingsspeak.shubham.letthingsspeak.HomeAdapter;
-import com.letthingsspeak.shubham.letthingsspeak.MainActivity;
 import com.letthingsspeak.shubham.letthingsspeak.R;
-import com.letthingsspeak.shubham.letthingsspeak.RoomDetails;
-import com.letthingsspeak.shubham.letthingsspeak.RoomStore;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.letthingsspeak.shubham.letthingsspeak.constants.Constants.TITLE_KEY;
+import static com.homeautomation.letthingsspeak.constants.Constants.TITLE_KEY;
 
 public class DeviceActivity extends AppCompatActivity {
     private static final String KEY_INDEX = "device_index";
